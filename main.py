@@ -18,9 +18,9 @@ config = json.load(f)
 
 async def open_account(user:discord.Member):
     cluster = MongoClient(auth_url)
-    db = cluster["minty"]
+    db = cluster[""]
 
-    cursor = db["minty"]
+    cursor = db[""]
 
     try:
         post = {"_id": user.id, "wallet": 1000, "bank": 0, "admin": 0, "banned" : 0} 
@@ -32,9 +32,9 @@ async def open_account(user:discord.Member):
 
 async def get_bank_data(user:discord.Member):
     cluster = MongoClient(auth_url)
-    db = cluster["minty"]
+    db = cluster[""]
 
-    cursor = db["minty"]
+    cursor = db[""]
 
     user_data = cursor.find({"_id": user.id})
 
@@ -52,9 +52,9 @@ async def get_bank_data(user:discord.Member):
 
 async def update_bank(user:discord.Member, amount=0, mode="wallet"):
     cluster = MongoClient(auth_url)
-    db = cluster["minty"]
+    db = cluster[""]
 
-    cursor = db["minty"]
+    cursor = db[""]
 
     cursor.update_one({"_id": user.id}, {"$inc": {str(mode): amount}})
     
@@ -136,7 +136,7 @@ async def ping(ctx):
 
 async def ch_pr():
     await client.wait_until_ready()
-    statuses = ["minty sleep.","youtube","icedragon pls help me with code","eco help"]
+    statuses = ["Put a list of statuses here"]
     while not client.is_closed():
         status = random.choice(statuses)
         await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=status))
