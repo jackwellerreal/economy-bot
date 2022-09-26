@@ -11,10 +11,11 @@ intents = discord.Intents().all()
 client = commands.Bot(command_prefix=['eco ','Eco ','eco','Eco'], intents=intents)
 client.remove_command('help')
 
-auth_url = "MongoDB URL here"
-
 f = open('config.json')
 config = json.load(f)
+
+auth_url = config("mongodb-url") 
+
 
 async def open_account(user:discord.Member):
     cluster = MongoClient(auth_url)
