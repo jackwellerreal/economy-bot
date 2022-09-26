@@ -11,7 +11,10 @@ intents = discord.Intents().all()
 client = commands.Bot(command_prefix=['eco ','Eco ','eco','Eco'], intents=intents)
 client.remove_command('help')
 
-auth_url = "mongodb+srv://whatqm:bPboLtKFJCnUhDYo@minty.scl2p.mongodb.net/?"
+auth_url = "MongoDB URL here"
+
+f = open('config.json')
+config = json.load(f)
 
 async def open_account(user:discord.Member):
     cluster = MongoClient(auth_url)
@@ -141,4 +144,4 @@ async def ch_pr():
         await asyncio.sleep(10)
 
 client.loop.create_task(ch_pr())
-client.run('OTg4NzE1MDUyODIxNTE2MzI4.GNIMKE.KhaCwYWB6KNEETP0MudjCG7jFS8cmYeeUIOI2o')
+client.run(config("TOKEN"))
