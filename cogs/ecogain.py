@@ -230,13 +230,13 @@ class ecogain(commands.Cog):
             slot2 = random.choice(["put emoji list here"])
             slot3 = random.choice(["put emoji list here"])
         
-            slotOutput1 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |` \n`|` <a:BaguetteSpin:989050347047747675> `|` <a:BaguetteSpin:989050347047747675> `|` <a:BaguetteSpin:989050347047747675> `|` \n`|                |`    1/216 chance to get 9x your bet  \n`|                |`    1/36 chance to get 3x your bet "
-            slotOutput2 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |` \n`|` {slot1} `|` <a:BaguetteSpin:989050347047747675> `|` <a:BaguetteSpin:989050347047747675> `|` \n`|                |`    1/216 chance to get 9x your bet  \n`|                |`    1/36 chance to get 3x your bet "
-            slotOutput3 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |` \n`|` {slot1} `|` <a:BaguetteSpin:989050347047747675> `|` {slot3} `|` \n`|                |`    1/216 chance to get 9x your bet  \n`|                |`    1/36 chance to get 3x your bet "
-            slotOutput4 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |` \n`|` {slot1} `|` {slot2} `|` {slot3} `|` \n`|                |`    1/216 chance to get 9x your bet  \n`|                |`    1/36 chance to get 3x your bet "
-            slotOutput5 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |`    and won ₪ {3*bet} coins! :tada: (3x your bet) \n`|` {slot1} `|` {slot2} `|` {slot3} `|` \n`|                |`    1/216 chance to get 9x your bet  \n`|                |`    1/36 chance to get 3x your bet"
-            slotOutput6 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |`    and won ₪ {9*bet} coins! :tada: (9x your bet) \n`|` {slot1} `|` {slot2} `|` {slot3} `|` \n`|                |`    1/216 chance to get 9x your bet  \n`|                |`    1/36 chance to get 3x your bet "
-            slotOutput7 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |`    and lost ₪ {bet} coins! <:MH_trol:963555012238262273>\n`|` {slot1} `|` {slot2} `|` {slot3} `|` \n`|                |`    1/216 chance to get 9x your bet \n`|                |`    1/36 chance to get 3x your bet "
+            slotOutput1 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |` \n`|` 🤓 `|` 🤓 `|` 🤓 `|` \n`|                |` "
+            slotOutput2 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |` \n`|` {slot1} `|` 🤓 `|` 🤓 `|` \n`|                |`"
+            slotOutput3 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |` \n`|` {slot1} `|` 🤓 `|` {slot3} `|` \n`|                |`"
+            slotOutput4 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |` \n`|` {slot1} `|` {slot2} `|` {slot3} `|` \n`|                |`"
+            slotOutput5 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |`    and won ₪ {3*bet} coins! :tada: (3x your bet) \n`|` {slot1} `|` {slot2} `|` {slot3} `|` \n`|                |`"
+            slotOutput6 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |`    and won ₪ {9*bet} coins! :tada: (9x your bet) \n`|` {slot1} `|` {slot2} `|` {slot3} `|` \n`|                |`"
+            slotOutput7 = f"`|                |`    You bet ₪ {bet} coins! \n`|                |`    and lost ₪ {bet} coins! <:MH_trol:963555012238262273>\n`|` {slot1} `|` {slot2} `|` {slot3} `|` \n`|                |`"
         
             message = await ctx.send(content=slotOutput1)
             await asyncio.sleep(1)
